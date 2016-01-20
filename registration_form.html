@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Форма регистрации пользователя</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { /* Стиль для всего документа */
+font-size: 10pt; /* Размер шрифта */
+font-family: "Verdana", sans-serif; /* Название шрифта */
+}
+label { /* Стиль для всех элементов label */
+display: inline-block; /* Тип блока */
+width: 150px; /* Ширина */
+vertical-align: top; /* Вертикальное выравнивание */
+}
+select { /* Стиль для всех списков */
+width: 250px; /* Ширина */
+border: 1px solid black; /* Определение стиля для границы */
+}
+input.pole { /* Стиль для элемента input, имеющего класс pole */
+width: 250px; /* Ширина */
+border: 1px solid black; /* Определение стиля для границы */
+}
+textarea { /* Стиль для многострочного текстового поля */
+width: 250px; /* Ширина */
+height: 100px; /* Высота */
+border: 1px solid black; /* Определение стиля для границы */
+}
+form div { /* Стиль для всех div, расположенных внутри form */
+margin-bottom: 20px; /* Отступ блока снизу */
+}
+</style>
+</head>
+<body>
+<h1>Форма регистрации пользователя</h1>
+<form action="reg.php" method="POST" enctype="multipart/form-data">
+<div><label for="name_customer">Ваше имя и фамилия*:</label>
+<input type="text" name="name_customer" id="name_customer" class="pole"></div>
+<div><label for="password1">Пароль*:</label>
+<input type="password" name="password1" id="password1" class="pole"></div>
+<div><label for="password2">Повторите пароль*:</label>
+<input type="password" name="password2" id="password2" class="pole"></div>
+<div><label for="sex">Пол*:</label>
+Муж. <input type="radio" name="sex" id="sex1" value="м">
+Жен. <input type="radio" name="sex" id="sex2" value="ж"></div>
+<div><label for="city_customer">Город*:</label>
+<select id="city_customer" name="city_customer">
+<option value=""></option>
+<option value="Одесса">Одесса</option>
+<option value="другой город">другой город</option>
+</select></div>
+<div>
+<input type="reset" value="Очистить" style="margin-left: 150px;"><br><br>
+<input type="submit" value="Отправить" style="margin-left: 150px;">
+</div>
+</form>
+</body>
+</html>
